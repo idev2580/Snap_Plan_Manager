@@ -1,0 +1,14 @@
+{
+  "name": "snap_plan_mgr_be",
+  "version": "1.0.0",
+  "description": "Backend of Snap Plan Manager",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

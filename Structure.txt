@@ -1,0 +1,17 @@
+DATA_STRUCTURE_OF_<SNAP_PLAN_MANAGER>
+
+Class Task:
+	// label must be written when initialize.
+	string label;
+
+	// other things are not necessary.
+	string description;
+	datetime startDate;
+	datetime endDate;
+	int priority;
+	List dependencyTask;
+
+//End of Task Class
+
+
+
