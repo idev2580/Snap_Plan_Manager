@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  
+}
+
+.TopBar{
+  background-color:#262620;
+  color:white;
+  font-weight:60;
+  padding-left:10px;
+  margin-left:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 4px solid rgb(221, 72, 20);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.Logo{
+  max-height:96px;
+  margin-right:10px;
+  font-size:36px;
+}
+.LogoImg{
+  display:inline;
+}
+li{
+  display:inline;
+}

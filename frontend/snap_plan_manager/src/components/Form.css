@@ -1,0 +1,31 @@
+.form{
+    display: flex;
+}
+
+.form input{
+    flex:01; /* except for button, fill the spaces */
+    font-size:1.25rem;
+    outline: none;
+    border: none;
+    background:rgba(0,0,0,0);
+    color:white;
+    border-bottom: 1px solid rgb(221, 72, 20);
+}
+
+.create-button{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    margin-left: 0.5rem;
+    background:rgb(221, 72, 20);
+    border-radius:3px;
+    color:white;
+    font-weight:60;
+    cursor:pointer;
+}
+
+.create-button:hover{
+    background:rgb(171, 22, 00);
+}
