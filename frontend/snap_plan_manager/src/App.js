@@ -4,6 +4,7 @@ import snap_logo from './Snap_Plan_Manager_Logo_192.png';
 import './App.css';
 import Form from './components/Form'
 import PlanItemList from './components/PlanItemList';
+//import LoginPopup from './components/LoginPopup';
 
 /*
 In the developing of this front-end, I refered many parts from below link.

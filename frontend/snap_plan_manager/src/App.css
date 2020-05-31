@@ -25,3 +25,11 @@
 li{
   display:inline;
 }
+
+/*LightMode Compatibility*/
+@media (prefers-color-scheme: light) {
+  .TopBar{
+    color:black;
+    background-color:rgb(255,255,248);
+  }
+}

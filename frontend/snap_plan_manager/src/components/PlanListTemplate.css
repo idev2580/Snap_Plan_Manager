@@ -29,3 +29,16 @@
     color:white;
     min-height: 5rem;
 }
+
+/*LightMode Compatibility*/
+@media (prefers-color-scheme: light) {
+  .plan-list-template{
+      background: rgb(230,230,230);
+  }
+  .form-wrapper{
+      color:black;
+  }
+  .plans-wrapper{
+      color: black;
+  }
+}

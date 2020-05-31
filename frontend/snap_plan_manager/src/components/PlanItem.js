@@ -3,7 +3,7 @@ import './PlanItem.css';
 
 class PlanItem extends Component{
     render(){
-        const {text, checked, id, onToggle, onRemove} = this.props;
+        const {text, checked, id, onToggle} = this.props;
         /*
         Below <div className="plan-item" onClick={()=>onToggle(id)}>, in original example,
         there should be this code.

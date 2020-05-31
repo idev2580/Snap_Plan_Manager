@@ -1,4 +1,14 @@
-DATA_STRUCTURE_OF_<SNAP_PLAN_MANAGER>
+STRUCTURE_OF_<SNAP_PLAN_MANAGER>
+
+Class TaskSpace:
+	//Necessary
+	string label;
+	List<Task> taskList;
+	
+	//Not necessary
+	string description;
+	int priority;
+//End of TaskSpace Class
 
 Class Task:
 	// label must be written when initialize.
@@ -10,7 +20,6 @@ Class Task:
 	datetime endDate;
 	int priority;
 	List dependencyTask;
-
 //End of Task Class
 
 

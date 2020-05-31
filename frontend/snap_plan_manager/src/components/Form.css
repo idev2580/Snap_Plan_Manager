@@ -20,12 +20,22 @@
 
     margin-left: 0.5rem;
     background:rgb(221, 72, 20);
-    border-radius:3px;
     color:white;
+    border-radius:3px;
     font-weight:60;
     cursor:pointer;
 }
 
 .create-button:hover{
     background:rgb(171, 22, 00);
+}
+
+/*LightMode Compatibility*/
+@media (prefers-color-scheme: light) {
+    .create-button:hover{
+        background:rgb(250, 100, 50);
+    }
+    .form input{
+        color:black;
+    }
 }
