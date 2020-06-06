@@ -1,18 +1,9 @@
 STRUCTURE_OF_<SNAP_PLAN_MANAGER>
 
-Class TaskSpace:
-	//Necessary
-	string label;
-	List<Task> taskList;
-	
-	//Not necessary
-	string description;
-	int priority;
-//End of TaskSpace Class
-
 Class Task:
 	// label must be written when initialize.
 	string label;
+	int id;
 
 	// other things are not necessary.
 	string description;
