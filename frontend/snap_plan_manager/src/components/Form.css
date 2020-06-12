@@ -31,9 +31,9 @@
 }
 
 .suggest-candidates{
-    padding: auto;
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
+    padding-top: 1px;
+    padding-bottom: 1px;
+    align-items: center; 
     cursor: pointer;
     transition: all 0.15s;
     user-select: none;

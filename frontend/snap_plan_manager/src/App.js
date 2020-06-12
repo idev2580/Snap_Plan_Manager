@@ -62,7 +62,7 @@ class App extends React.Component {
     let {input,todos,recent_removed,rec_cands,show_rec} = this.state;
     this.setState({
         show_rec:true,
-        rec_cands:recent_removed.map((rec)=><li className="suggests" onClick={()=>{this.form_suggestClick(rec.text,rec.dependencies)}}>{rec.text}</li>)
+        rec_cands:recent_removed.map((rec)=><li><p className="suggests" onClick={()=>{this.form_suggestClick(rec.text,rec.dependencies)}}>{rec.text}</p></li>)
       }
     )
     console.log("form_handleClick_todos:",todos)
