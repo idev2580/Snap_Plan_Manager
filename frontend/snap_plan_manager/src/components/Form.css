@@ -30,6 +30,19 @@
     background:rgb(171, 22, 00);
 }
 
+.suggest-candidates{
+    padding: auto;
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+}
+.suggest-candidates:hover {
+    background: #262620;
+}
+  
+
 /*LightMode Compatibility*/
 @media (prefers-color-scheme: light) {
     .create-button:hover{
@@ -38,4 +51,7 @@
     .form input{
         color:black;
     }
+    .suggest-candidates:hover{
+        background: #FAFAF9;
+      }
 }

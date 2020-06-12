@@ -10,15 +10,21 @@ onChange    : the function which will be executed when the input field is changi
 onKeyPress  : the function which will be executed when key is pressed.(To make "Enter key" = "Button Click")
 */
 
-const Form=({value, onChange, onCreate, onKeyPress}) => {
+/*Function - style*/
+const Form=({value, show_rec,rec_cands, onChange, onCreate, onKeyPress, onClick}) => {
     return(
-        <div className="form">
-            <input value={value} onChange={onChange} onKeyPress={onKeyPress}/>
-            <div className="create-button" onClick={onCreate}>
-                Create
+        <div className="form_parent">
+            <div className="form">
+                <input value={value} onChange={onChange} onKeyPress={onKeyPress} onClick={onClick}/>
+                <div className="create-button" onClick={onCreate}>
+                    +
+                </div>
             </div>
+            {
+                show_rec && (<div className="suggest-candidates"><ul>{rec_cands}</ul></div> )
+            }
         </div>
-    )
+    );
 }
 
 export default Form;

@@ -3,7 +3,7 @@ import './PlanItem.css';
 
 class PlanItem extends Component{
     render(){
-        const {text, checked, id, onToggle} = this.props;
+        const {text, checked, id, onToggle, Click_sig} = this.props;
         /*
         Below <div className="plan-item" onClick={()=>onToggle(id)}>, in original example,
         there should be this code.
@@ -17,8 +17,11 @@ class PlanItem extends Component{
         So, I just had to add the data delete in DB function for checking.
         */
         return(
-            <div className="plan-item" onClick={()=>onToggle(id)}>
-                
+            <div className="plan-item" onClick={()=>Click_sig(id)}>
+                <div className="toggle" onClick={(e) => {
+                e.stopPropagation(); //Stop the diffusion of events. It makes only run onRemove, not onToggle
+                onToggle(id)}
+                }><input type="checkbox" className="togglecheck"></input></div>
                 <div className={`plan-text ${checked ? 'checked': ''}`}>
                     <div>{text}</div>
                 </div>

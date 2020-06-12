@@ -1,6 +1,7 @@
 import React from 'react'
 import './PlanListTemplate.css'
 
+/*Function -style*/
 const PlanListTemplate = ({form, children}) => {
     return (
         <main className="plan-list-template">

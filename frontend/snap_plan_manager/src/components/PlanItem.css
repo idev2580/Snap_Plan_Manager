@@ -33,6 +33,12 @@
     color: #3bc9db;
     font-weight: 800;
   }
+input.togglecheck{
+  size:20px;
+  color: #3bc9db;
+  border-radius : 4px;
+}
+
 
   @media (prefers-color-scheme: light) {
     .plan-item:hover{
