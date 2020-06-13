@@ -6,11 +6,14 @@ class PlanItemList extends Component{
         const{todos, onToggle, Click_sig} = this.props;
 
         const planlist = todos.map(
-            ({id,text,checked})=>(
+            ({id,text,checked,click,dependencies})=>(
             <PlanItem 
             id={id}
             text={text}
             checked={checked}
+            dependencies={dependencies}
+            click = {click}
+
             onToggle={onToggle}
             Click_sig={Click_sig}
             key={id}

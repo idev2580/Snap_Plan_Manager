@@ -17,20 +17,21 @@ However, there are some differences between that and this front-end in design an
 class App extends React.Component {
 
   id = 3
+  //login, input, click(in todo), show_rec are variables which will not be used in Backend.
   state = {
     login:true,
     input: '',
     todos: [
       {id : 0, text : 'FreshmanPrj', checked:false, dependencies : [
-        {id : 0, text : 'React', checked:true},
-        {id : 1, text : 'Express', checked:false},
-        {id : 2, text :'MongoDB', checked:false}
-      ]},
-      {id : 1, text : 'ChemExp Submit', checked:false, dependencies : []},
-      {id : 2, text : 'Chem Note Submit', checked:true, dependencies : []}
+        {id : 0, text : 'React', checked:true, dependencies: []},
+        {id : 1, text : 'Express', checked:false, dependencies: []},
+        {id : 2, text :'MongoDB', checked:false, dependencies: []}
+      ], click:false},
+      {id : 1, text : 'ChemExp Submit', checked:false, dependencies : [], click:false},
+      {id : 2, text : 'Chem Note Submit', checked:true, dependencies : [], click:false}
     ],
     recent_removed:[
-      {text : 'Physics Assignment', checked:false, dependencies : []}
+      {text : 'Physics Assignment', checked:false, dependencies : [], click:false}
     ],
     rec_cands:[],
     show_rec:false
@@ -52,7 +53,8 @@ class App extends React.Component {
         id: this.id++,
         text: text_get,
         checked: false,
-        dependencies: pdependencies
+        dependencies: pdependencies,
+        click:false
       }),
       show_rec:false
     })
@@ -86,14 +88,20 @@ class App extends React.Component {
           id: this.id++,
           text: input,
           checked: false,
-          dependencies: []
+          dependencies: [],
+          click:false
         }),
         show_rec:false
     })
     }
-  }
+  };
   /* PlanItemList */
+  onToggle=(id)=>{
 
+  }
+  Click_sig = (id) =>{
+
+  }
   /* Render */
   render(){
     /* Input Form(Create New Item) */
@@ -102,7 +110,10 @@ class App extends React.Component {
       handleChange,
       handleCreate,
       handleKeyPress,
-      form_handleClick
+      form_handleClick,
+
+      onToggle,
+      Click_sig
     } = this;
 
   return (
@@ -122,7 +133,7 @@ class App extends React.Component {
           onCreate={handleCreate}
           onClick={form_handleClick}
         />}>
-          <PlanItemList todos={todos}/>
+          <PlanItemList todos={todos} onToggle = {onToggle} Click_sig={Click_sig}/>
       </PlanListTemplate>
     </div>
   );}

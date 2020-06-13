@@ -3,7 +3,7 @@ import './PlanItem.css';
 
 class PlanItem extends Component{
     render(){
-        const {text, checked, id, onToggle, Click_sig} = this.props;
+        const {text, checked, id,dependencies,click, onToggle, Click_sig} = this.props;
         /*
         Below <div className="plan-item" onClick={()=>onToggle(id)}>, in original example,
         there should be this code.
@@ -22,9 +22,13 @@ class PlanItem extends Component{
                 e.stopPropagation(); //Stop the diffusion of events. It makes only run onRemove, not onToggle
                 onToggle(id)}
                 }><input type="checkbox" className="togglecheck"></input></div>
+                
                 <div className={`plan-text ${checked ? 'checked': ''}`}>
                     <div>{text}</div>
                 </div>
+                {
+                    click&&(<div className="dependencies"></div>)
+                }
                 {
                     checked && (<div className="check-mark"></div>)
                 }
