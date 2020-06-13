@@ -22,14 +22,6 @@
 .LogoImg{
   display:inline;
 }
-.suggests{
-  padding: auto;
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
-    cursor: pointer;
-    transition: all 0.15s;
-    user-select: none;
-}
 
 li{
   display:inline;
@@ -41,4 +33,11 @@ li{
     color:black;
     background-color:rgb(255,255,248);
   }
+}
+
+.other-info{
+  color:rgb(125,125,125);
+  font-size:8px;
+  text-align: center;
+  margin-top: 16px;
 }

@@ -39,10 +39,21 @@ input.togglecheck{
   border-radius : 4px;
 }
 
+.dependency_add{
+  margin-left:2.5rem;
+}
+.dependency_ui{
+  display:block;
+  background: #252525;
+}
+
 
   @media (prefers-color-scheme: light) {
     .plan-item:hover{
       background: #FAFAF9;
+    }
+    .dependency_ui{
+      background: rgb(200,200,200);
     }
     .plan-item{
 
