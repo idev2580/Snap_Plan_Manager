@@ -4,6 +4,9 @@
 }
 
 .TopBar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   background-color:#262620;
   color:white;
   font-weight:60;
@@ -20,11 +23,11 @@
   font-size:36px;
 }
 .LogoImg{
-  display:inline;
+  display:flex;
 }
 
 li{
-  display:inline;
+  display:flex;
 }
 
 /*LightMode Compatibility*/
@@ -40,4 +43,9 @@ li{
   font-size:8px;
   text-align: center;
   margin-top: 16px;
+}
+.username_btn{
+  margin-right: 1rem;
+  text-align:center;
+  cursor:pointer;
 }

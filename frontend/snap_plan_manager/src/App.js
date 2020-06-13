@@ -260,7 +260,7 @@ class App extends React.Component {
       <ul className="TopBar">
         <li className="Logo"><a href='./App.js'><img className="LogoImg" src="./Snap_Plan_Manager_Logo_192.png" alt="(Snap Plan Manager Logo)" height="42px">
           </img></a> SnapPlanner</li>
-        <li><a onClick={handleIDClick}>{username}</a></li>
+        <li><div className="username_btn" onClick={handleIDClick}>{username}</div></li>
       </ul>
       <PlanListTemplate form={
         <Form
