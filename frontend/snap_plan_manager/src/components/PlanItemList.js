@@ -4,10 +4,10 @@ import PlanItem from './PlanItem'
 
 class PlanItemList extends Component{
     render(){
-        const{todos, onToggle, Click_sig, onToggle_dep, dep_input, handleCreate_dep, handleChange_dep, handleKeyPress_dep} = this.props;
+        const{todos, onToggle, Click_sig, onToggle_dep, handleCreate_dep, handleChange_dep, handleKeyPress_dep} = this.props;
 
         const planlist = todos.map(
-            ({id,text,checked,click,dependencies})=>(
+            ({id,text,checked,click,dependencies,dep_input})=>(
             <PlanItem 
             id={id}
             text={text}

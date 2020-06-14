@@ -23,9 +23,11 @@ class App extends React.Component {
     username:"NotLoggedOn",
     login:false,
     input: '',
-    dep_input:'',
     todos: [],
-    recent_removed:[],
+    recent_removed:[{
+      text:"Recent Removed Work_Sample 1",
+      dependencies:[{id:0, text:"Nope", checked: false}]
+    }],
     rec_cands:[],
     show_rec:false
   }
@@ -47,7 +49,9 @@ class App extends React.Component {
         text: text_get,
         checked: false,
         dependencies: pdependencies,
-        click:false
+        click:false,
+        dep_id:(pdependencies.length+10),
+        dep_input:""
       }),
       show_rec:false
     })
@@ -83,7 +87,8 @@ class App extends React.Component {
           checked: false,
           dependencies: [],
           click:false,
-          dep_id:0
+          dep_id:0,
+          dep_input:""
         }),
         show_rec:false
     })
@@ -95,11 +100,11 @@ class App extends React.Component {
     }
   }
   handleCreate_dep=(parent_id)=>{
-    const {dep_input, todos} = this.state;
+    const {todos} = this.state;
     const index = todos.findIndex(todo => todo.id === parent_id)
     const selected = todos[index]
 
-    if (dep_input == ""){
+    if (selected.dep_input == ""){
       alert("Input is empty!");
     //console.log("Input is empty!")
     }
@@ -107,7 +112,7 @@ class App extends React.Component {
       const updateDependencies = selected.dependencies.concat(
         {
           id: selected.dep_id++,
-          text: dep_input,
+          text: selected.dep_input,
           checked:false
         }
       );
@@ -116,19 +121,29 @@ class App extends React.Component {
       const updateTodos = [...todos];
       updateTodos[index]={
         ...selected,
-        dependencies:updateDependencies
+        dependencies:updateDependencies,
+        dep_input:""
       }
 
       this.setState({
         todos:  updateTodos,
-        dep_input : ''
       })
     }
     console.log("Excuted handleCreate_dep")
   }
-  handleChange_dep =(e)=>{
+  handleChange_dep =(parent_id,e)=>{
+    const {todos} = this.state;
+    const index = todos.findIndex(todo => todo.id === parent_id)
+    const selected = todos[index]
+
+    const updateTodos = [...todos];
+      updateTodos[index]={
+        ...selected,
+        dep_input:e.target.value
+      }
+
     this.setState({
-      dep_input: e.target.value // input 의 다음 바뀔 값
+      todos:updateTodos
     });
   }
   /* PlanItemList */
@@ -277,7 +292,6 @@ class App extends React.Component {
             onToggle = {onToggle} 
             Click_sig={Click_sig} 
             onToggle_dep={onToggle_dep}
-            dep_input={dep_input}
             handleCreate_dep={handleCreate_dep}
             handleChange_dep={handleChange_dep}
             handleKeyPress_dep={handleKeyPress_dep}
