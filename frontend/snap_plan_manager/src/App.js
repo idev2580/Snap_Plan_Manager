@@ -264,7 +264,7 @@ class App extends React.Component {
   request_del_todo=(user_id,id)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/todosremove", 
+      url:"http://ssal.sparcs.org:40000/todosremove", 
       data:{
         username:user_id,
         type:1,
@@ -275,7 +275,7 @@ class App extends React.Component {
   request_del_todo_dep=(user_id,par_id,dep_id)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/todosremove", 
+      url:"http://ssal.sparcs.org:40000/todosremove", 
       data:{
         username:user_id,
         type:2,
@@ -287,7 +287,7 @@ class App extends React.Component {
   request_add_todo=(user_id,todoobj)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/todos", 
+      url:"http://ssal.sparcs.org:40000/todos", 
       data:{
         username:user_id,
         type:1,
@@ -298,7 +298,7 @@ class App extends React.Component {
   request_add_todo_dep=(user_id,par_id,dep_todo)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/todos", 
+      url:"http://ssal.sparcs.org:40000/todos", 
       data:{
         username:user_id,
         type:2,
@@ -312,7 +312,7 @@ class App extends React.Component {
           console.log("ID:",uname,"/PW:",pw)
           resolve(axios({
             method:'post',
-            url:"http://localhost:4000/login", 
+            url:"http://ssal.sparcs.org:40000/login", 
             data:{id:uname, pw:pw}
           })
           )}
@@ -322,7 +322,7 @@ class App extends React.Component {
   request_signup=(uname,pw)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/signup", 
+      url:"http://ssal.sparcs.org:40000/signup", 
       data:{
         id:uname,
         pw:pw
@@ -333,7 +333,7 @@ class App extends React.Component {
   request_recent_removed=(uname)=>{
     return axios({
       method:'post',
-      url:"http://localhost:4000/todoshistory", 
+      url:"http://ssal.sparcs.org:40000/todoshistory", 
       data:{
         username:uname
       }
@@ -381,7 +381,7 @@ class App extends React.Component {
       //So, replaced with 'POST' Request.
         axios({
           method:'post',
-          url:"http://localhost:4000/todosget", 
+          url:"http://ssal.sparcs.org:40000/todosget", 
           data:{username:uname, pw:pw}
         }).then((todos)=>{
         if (get.data.loginbool){
