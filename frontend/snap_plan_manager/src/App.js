@@ -6,7 +6,7 @@ import Form from './components/Form'
 import PlanItemList from './components/PlanItemList';
 import DependencyItemList from './components/DependencyItemList';
 import LoginPopup from './components/LoginPopup';
-const axios = require('axios');
+import axios from 'axios'
 
 //import LoginPopup from './components/LoginPopup';
 const sec = require('./sha256.js');
