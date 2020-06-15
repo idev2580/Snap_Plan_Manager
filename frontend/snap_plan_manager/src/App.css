@@ -36,6 +36,9 @@ li{
     color:black;
     background-color:rgb(255,255,248);
   }
+  .login-popup{
+    background:#FFFFFF;
+  }
 }
 
 .other-info{
@@ -49,3 +52,4 @@ li{
   text-align:center;
   cursor:pointer;
 }
+

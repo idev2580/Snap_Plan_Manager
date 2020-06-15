@@ -1,0 +1,66 @@
+.login-popup-box{
+    position: fixed;
+    text-align:center;
+    top:120px;
+    left:50%;
+    min-width: 320px;
+    max-width: 70%;
+    min-height: 120px;
+    max-height: 40%;
+    border-radius:3px;
+    transform:translate(-50%,0%);
+    background:#252525;
+    border-color:#101010;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+  }
+
+
+.id , .pw{
+    display: flex;
+    align-items:center;
+    margin:0px;
+}
+
+.id p, .pw p{
+    display:inline;
+    min-width:30px;
+    margin-right:1rem;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.id input , .pw input{
+    flex:01; /* except for button, fill the spaces */
+    font-size:1rem;
+    outline: none;
+    border: none;
+    background:rgba(0,0,0,0);
+    color:white;
+    border-bottom: 1px solid rgb(221, 72, 20);
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.buttons p{
+    cursor:pointer;
+    align-items: center;
+    text-align:center;
+    justify-content:center;
+    transition: all 0.15s;
+    margin:0px;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.buttons p:hover{
+    background:#EEEEEE;
+}
+
+  @media (prefers-color-scheme: light) {
+    .login-popup-box{
+      background:#FFFFFF;
+    }
+    .id input , .pw input{
+        color:black;
+    }
+  }
